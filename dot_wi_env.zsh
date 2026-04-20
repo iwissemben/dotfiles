@@ -1,1 +1,2 @@
-export PATH="$(brew --prefix)/opt/python@3.13/libexec/bin:$PATH"
+# --- System Preferences ---
+export EDITOR="code --wait"

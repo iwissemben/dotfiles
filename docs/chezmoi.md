@@ -37,7 +37,7 @@ Your local environment includes custom aliases to quickly edit managed files wit
 1.  **Modify a config file directly:**
     ```sh
     # e.g., edit your Zsh configuration
-    vim ~/.zshrc
+    code ~/.zshrc
     ```
 
 2.  **Apply the changes back to `chezmoi`'s source directory:**
