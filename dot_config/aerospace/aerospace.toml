@@ -1,0 +1,161 @@
+# =============================================================================
+# AeroSpace Configuration - Version 4.9
+# Logic: Global Command Modifiers & Inverted Layout Controls
+# French Mnemonics: HBGD (Haut, Bas, Gauche, Droite)
+# =============================================================================
+
+# --- GLOBAL SETTINGS ---
+start-at-login = true
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+[gaps]
+    inner.horizontal = 4
+    inner.vertical =   4
+    outer.left =       0
+    outer.bottom =     0
+    outer.top =        0
+    outer.right =      0
+
+[key-mapping]
+    preset = 'qwerty'
+
+# --- BINDING MODES ---
+[mode.main.binding]
+    # --- Focus Navigation (HBGD) ---
+    cmd-h = 'focus up'
+    cmd-b = 'focus down'
+    cmd-g = 'focus left'
+    cmd-d = 'focus right'
+
+    # --- Window Movement (HBGD) ---
+    cmd-shift-h = 'move up'
+    cmd-shift-b = 'move down'
+    cmd-shift-g = 'move left'
+    cmd-shift-d = 'move right'
+
+    # --- Workspace Switching (Cmd + Number) ---
+    cmd-1 = 'workspace 1_Browse'
+    cmd-2 = 'workspace 2_Develop'
+    cmd-3 = 'workspace 3_Execute'
+    cmd-4 = 'workspace 4_Read'
+    cmd-5 = 'workspace 5_Communicate'
+    cmd-6 = 'workspace 6_Relax'
+    cmd-9 = 'workspace 9_Experiment'
+
+    # --- Move Node to Workspace (Cmd + Alt + Number) ---
+    cmd-alt-1 = 'move-node-to-workspace 1_Browse'
+    cmd-alt-2 = 'move-node-to-workspace 2_Develop'
+    cmd-alt-3 = 'move-node-to-workspace 3_Execute'
+    cmd-alt-4 = 'move-node-to-workspace 4_Read'
+    cmd-alt-5 = 'move-node-to-workspace 5_Communicate'
+    cmd-alt-6 = 'move-node-to-workspace 6_Relax'
+    cmd-alt-9 = 'move-node-to-workspace 9_Experiment'
+
+    # --- Monitor Transfers (Cmd + Alt + Shift + G/D) ---
+    cmd-alt-shift-g = 'move-workspace-to-monitor --wrap-around prev'
+    cmd-alt-shift-d = 'move-workspace-to-monitor --wrap-around next'
+
+    # --- JUXTAPOSED LAYOUT CONTROLS ---
+    # F = Floating (Quick toggle for window capture/release)
+    alt-f = 'layout floating tiling'
+    alt-shift-f = 'fullscreen'
+    
+    # Tiling/Accordion Modes
+    alt-t = 'layout tiles horizontal vertical'
+    alt-a = 'layout accordion horizontal vertical'
+    
+    # Utilities
+    alt-enter = 'exec-and-forget open -a Finder ~'
+    alt-shift-c = 'mode service'
+
+[mode.service.binding]
+    esc = ['reload-config', 'mode main']
+    r = ['reload-config', 'mode main']
+    d = ['enable toggle', 'mode main']
+    backspace = ['close-all-windows-but-current', 'mode main']
+
+# --- MONITOR ASSIGNMENT ---
+[workspace-to-monitor-force-assignment]
+    1_Browse      = 'main'
+    2_Develop     = 'main'
+    3_Execute     = ['tertiary', 'secondary']
+    4_Read        = 'secondary'
+    5_Communicate = 'secondary'
+    6_Relax       = 'main'
+    9_Experiment  = 'main'
+
+# --- APPLICATION ROUTING RULES ---
+
+[[on-window-detected]]
+    if.app-id = 'com.brave.Browser'
+    run = ['layout tiling', 'move-node-to-workspace 1_Browse']
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome'
+    run = ['layout tiling', 'move-node-to-workspace 1_Browse']
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.VSCode'
+    run = 'move-node-to-workspace 2_Develop'
+[[on-window-detected]]
+    if.app-id = 'com.apple.dt.Xcode'
+    run = 'move-node-to-workspace 2_Develop'
+[[on-window-detected]]
+    if.app-id = 'com.apple.CoreSimulator.Simulator'
+    run = 'move-node-to-workspace 2_Develop'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.Terminal'
+    run = 'move-node-to-workspace 3_Execute'
+
+[[on-window-detected]]
+    if.app-id = 'com.adobe.Acrobat.Pro'
+    run = 'move-node-to-workspace 4_Read'
+[[on-window-detected]]
+    if.app-id = 'com.apple.Notes'
+    run = 'move-node-to-workspace 4_Read'
+[[on-window-detected]]
+    if.app-id = 'com.apple.iBooksX'
+    run = 'move-node-to-workspace 4_Read'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.mail'
+    run = 'move-node-to-workspace 5_Communicate'
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.Outlook'
+    run = 'move-node-to-workspace 5_Communicate'
+[[on-window-detected]]
+    if.app-id = 'com.apple.FaceTime'
+    run = 'move-node-to-workspace 5_Communicate'
+[[on-window-detected]]
+    if.app-id = 'com.apple.MobileSMS'
+    run = 'move-node-to-workspace 5_Communicate'
+[[on-window-detected]]
+    if.app-id = 'com.hnc.Discord'
+    run = 'move-node-to-workspace 5_Communicate'
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.teams2'
+    run = 'move-node-to-workspace 5_Communicate'
+[[on-window-detected]]
+    if.app-id = 'us.zoom.xos'
+    run = 'move-node-to-workspace 5_Communicate'
+
+[[on-window-detected]]
+    if.app-id = 'com.spotify.client'
+    run = 'move-node-to-workspace 6_Relax'
+[[on-window-detected]]
+    if.app-id = 'com.apple.Music'
+    run = 'move-node-to-workspace 6_Relax'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.finder'
+    run = 'layout floating'
+[[on-window-detected]]
+    if.app-id = 'com.apple.systempreferences'
+    run = 'layout floating'
