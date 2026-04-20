@@ -2,8 +2,8 @@
 
 My personal configuration files for a consistent and productive development environment on macOS, managed with `chezmoi`.
 
-!fastfetch-placeholder
-> A screenshot of my desktop running `fastfetch` will go here.
+![Screenshot of a mac terminal using tmux for spliting and fastfetch](docs/img/fastfetch_placeholder.png)
+
 
 ---
 
