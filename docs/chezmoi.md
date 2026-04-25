@@ -25,7 +25,8 @@ Your local environment includes custom aliases to quickly edit managed files wit
 | `wi_config` | `chezmoi edit ~/.zshrc` | Edit the main Zsh configuration. |
 | `wi_aliases` | `chezmoi edit ~/.wi_aliases.zsh` | Edit the custom aliases file. |
 | `wi_env_config` | `chezmoi edit ~/.wi_env_config.zsh` | Edit the environment variables configuration. |
-| `wi_start` | `chezmoi edit ~/.wi_startup.zsh` | Edit the startup script. |
+| `wi_startup_config` | `chezmoi edit ~/.wi_startup.zsh` | Edit the startup script. |
+| `wi_tmux_config` | `chezmoi edit ~/.tmux.conf` | Edit the tmux configuration. |
 | `wi_reload` | `source ~/.zshrc` | Reload the Zsh configuration in the current session. |
 
 ### Custom Workflows
