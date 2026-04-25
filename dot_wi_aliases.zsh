@@ -14,6 +14,7 @@ alias wi_doctor="brew doctor"
 alias wi_code="code ."
 alias wi_copy="fc -ln -1 | pbcopy" # Copies the last command to clipboard
 alias wi_brew_maintain="brew update && brew upgrade && brew cleanup && brew doctor"
+alias wi_brew_log="cat /tmp/wi_brew_maintain.log" # View background maintenance logs
 
 # Smart Brew Dump: Updates the Brewfile and syncs it with chezmoi automatically
 wi_brew_dump() {
