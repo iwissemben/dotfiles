@@ -22,7 +22,9 @@ wi_brew_dump() {
     brew bundle dump --describe --force --file=~/Brewfile
     echo "🏠 Syncing Brewfile with chezmoi..."
     chezmoi add ~/Brewfile
-    echo "✅ Done. Remember to 'chezmoi cd && git push' to backup online."
+    echo "📦 Staging Brewfile in git..."
+    git -C "$(chezmoi source-path)" add Brewfile
+    echo "✅ Done. You can now run 'chezmoi cd', then 'git commit -m \"...\"' and 'git push'."
 }
 
 # --- SYSTEM FIXES ---

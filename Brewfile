@@ -1,4 +1,6 @@
 tap "nikitabobko/tap"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
 # Cross-platform make
 brew "cmake"
 # USB programmer
@@ -37,6 +39,8 @@ cask "bitwarden"
 cask "claude"
 # Voice and text chat software
 cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Calendar for professionals and teams
@@ -45,6 +49,7 @@ cask "notion-calendar"
 cask "visual-studio-code"
 vscode "bierner.markdown-mermaid"
 vscode "davidanson.vscode-markdownlint"
+vscode "github.copilot-chat"
 vscode "google.geminicodeassist"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
