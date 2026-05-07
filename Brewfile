@@ -45,6 +45,8 @@ cask "docker-desktop"
 cask "notion"
 # Calendar for professionals and teams
 cask "notion-calendar"
+# Get up and running with large language models locally
+cask "ollama-app"
 # Open-source code editor
 cask "visual-studio-code"
 vscode "bierner.markdown-mermaid"
