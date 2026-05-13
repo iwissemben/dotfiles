@@ -9,6 +9,8 @@ brew "dfu-util"
 brew "fastfetch"
 # GitHub command-line tool
 brew "gh"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
 # Core application library for C
 brew "glib"
 # Cryptographic library based on the code from GnuPG
@@ -31,8 +33,6 @@ brew "tmux"
 brew "uv"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
-# Distribution of the Python and R programming languages for scientific computing
-cask "anaconda"
 # Desktop password and login vault
 cask "bitwarden"
 # Anthropic's official Claude AI desktop app
@@ -51,7 +51,6 @@ cask "ollama-app"
 cask "visual-studio-code"
 vscode "bierner.markdown-mermaid"
 vscode "davidanson.vscode-markdownlint"
-vscode "github.copilot-chat"
 vscode "google.geminicodeassist"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
