@@ -47,6 +47,10 @@ cask "notion"
 cask "notion-calendar"
 # Get up and running with large language models locally
 cask "ollama-app"
+# Collaboration platform for API development
+cask "postman"
+# HTTP debugging proxy
+cask "proxyman"
 # Open-source code editor
 cask "visual-studio-code"
 vscode "bierner.markdown-mermaid"
@@ -70,3 +74,4 @@ vscode "ms-vscode.cpptools"
 vscode "platformio.platformio-ide"
 vscode "rickaym.manim-sideview"
 vscode "shd101wyy.markdown-preview-enhanced"
+vscode "tomoki1207.pdf"
