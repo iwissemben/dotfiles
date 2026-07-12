@@ -27,37 +27,20 @@ brew "pixman"
 brew "python@3.13"
 # Python interface to Tcl/Tk
 brew "python-tk@3.13"
-# Low-level access to audio, keyboard, mouse, joystick, and graphics
-brew "sdl2"
+# SDL2 compatibility layer that uses SDL3 behind the scenes
+brew "sdl2-compat"
 # Terminal multiplexer
 brew "tmux"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
-# Desktop password and login vault
-cask "bitwarden"
-# Anthropic's official Claude AI desktop app
-cask "claude"
-# Voice and text chat software
-cask "discord"
-# App to build and share containerised applications and microservices
-cask "docker-desktop"
-# App to write, plan, collaborate, and get organised
-cask "notion"
-# Calendar for professionals and teams
-cask "notion-calendar"
-# Get up and running with large language models locally
-cask "ollama-app"
-# Collaboration platform for API development
-cask "postman"
-# HTTP debugging proxy
-cask "proxyman"
-# Open-source code editor
-cask "visual-studio-code"
+# Allows connection to a computer remotely
+cask "anydesk"
 vscode "bierner.markdown-mermaid"
 vscode "davidanson.vscode-markdownlint"
 vscode "google.geminicodeassist"
+vscode "jason2866.esp-decoder"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
@@ -73,6 +56,8 @@ vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpp-devtools"
 vscode "ms-vscode.cpptools"
+vscode "ms-vscode.cpptools-extension-pack"
+vscode "ms-vscode.cpptools-themes"
 vscode "platformio.platformio-ide"
 vscode "rickaym.manim-sideview"
 vscode "shd101wyy.markdown-preview-enhanced"
