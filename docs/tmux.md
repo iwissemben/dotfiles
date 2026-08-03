@@ -34,3 +34,10 @@
 | `PREFIX + z` | Toggle zoom for the current pane. |
 | `PREFIX + x` | Kill the current pane. |
 | `PREFIX + o` | Cycle through panes. |
+
+### Plugin: tmux-resurrect
+
+| Shortcut | Description |
+|---|---|
+| `PREFIX + Ctrl-s` | Save the current tmux environment (windows, panes, etc.). |
+| `PREFIX + Ctrl-r` | Restore the last saved environment. |
