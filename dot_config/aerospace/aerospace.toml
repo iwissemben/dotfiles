@@ -1,7 +1,7 @@
 # =============================================================================
 # AeroSpace Configuration - Version 4.9
 # Logic: Global Command Modifiers & Inverted Layout Controls
-# French Mnemonics: HBGD (Haut, Bas, Gauche, Droite)
+# French Mnemonics & Spatial Layout: HBDG (Haut, Bas; D=Left, G=Right)
 # =============================================================================
 
 # --- GLOBAL SETTINGS ---
@@ -28,17 +28,17 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 # --- BINDING MODES ---
 [mode.main.binding]
-    # --- Focus Navigation (HBGD) ---
+    # --- Focus Navigation (HBDG) ---
     cmd-h = 'focus up'
     cmd-b = 'focus down'
-    cmd-g = 'focus left'
-    cmd-d = 'focus right'
+    cmd-d = 'focus left'
+    cmd-g = 'focus right'
 
-    # --- Window Movement (HBGD) ---
+    # --- Window Movement (HBDG) ---
     cmd-shift-h = 'move up'
     cmd-shift-b = 'move down'
-    cmd-shift-g = 'move left'
-    cmd-shift-d = 'move right'
+    cmd-shift-d = 'move left'
+    cmd-shift-g = 'move right'
 
     # --- Workspace Switching (Cmd + Number) ---
     cmd-1 = 'workspace 1_Browse'
@@ -58,9 +58,9 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     cmd-alt-6 = 'move-node-to-workspace 6_Relax'
     cmd-alt-9 = 'move-node-to-workspace 9_Experiment'
 
-    # --- Monitor Transfers (Cmd + Alt + Shift + G/D) ---
-    cmd-alt-shift-g = 'move-workspace-to-monitor --wrap-around prev'
-    cmd-alt-shift-d = 'move-workspace-to-monitor --wrap-around next'
+    # --- Monitor Transfers (Cmd + Alt + Shift + D/G) ---
+    cmd-alt-shift-d = 'move-workspace-to-monitor --wrap-around prev'
+    cmd-alt-shift-g = 'move-workspace-to-monitor --wrap-around next'
 
     # --- JUXTAPOSED LAYOUT CONTROLS ---
     # F = Floating (Quick toggle for window capture/release)
@@ -71,13 +71,23 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-t = 'layout tiles horizontal vertical'
     alt-a = 'layout accordion horizontal vertical'
     
+    # Layout Splits (Explicit Orientation)
+    alt-v = 'layout vertical'
+    alt-h = 'layout horizontal'
+
+    # Window Grouping / Compound Splits (Join with HBDG)
+    alt-shift-h = 'join-with up'
+    alt-shift-b = 'join-with down'
+    alt-shift-d = 'join-with left'
+    alt-shift-g = 'join-with right'
+    
     # Utilities
     alt-enter = 'exec-and-forget open -a Finder ~'
     alt-shift-c = 'mode service'
 
 [mode.service.binding]
     esc = ['reload-config', 'mode main']
-    r = ['reload-config', 'mode main']
+    r = ['flatten-workspace-tree', 'mode main'] # Reset layout (flattens nested containers into one group)
     d = ['enable toggle', 'mode main']
     backspace = ['close-all-windows-but-current', 'mode main']
 
